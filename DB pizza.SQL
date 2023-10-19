@@ -2,47 +2,110 @@
 CREATE TABLE EMPLEADO(
   CLAVE_EMPLEADO NUMBER,
   NOMBRE VARCHAR2(50),
-  APELLIDO_PATERNO VARCHAR2(50),
-  APELLIDO_MATERNO VARCHAR2(50),
-  DIRECCION VARCHAR2(50),
+  APELLIDO_PATERNO VARCHAR2(70),
+  APELLIDO_MATERNO VARCHAR2(70),
+  DIRECCION VARCHAR2(70),
   RFC VARCHAR2(50),
   CARGO VARCHAR2(50),
   SALARIO NUMBER
 );
 
+SELECT * FROM EMPLEADO;
 
 INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
 VALUES
-(1, 'Juan', 'Pérez', 'García', 'Calle 123, Col. Centro, Ciudad de México', '1234567890', 'Gerente', 50000),
-(2, 'María', 'López', 'Hernández', 'Av. Insurgentes Sur 456, Col. Roma Norte, Ciudad de México', '9876543210', 'Subgerente', 40000),
-(3, 'Pedro', 'Sánchez', 'Gómez', 'Calle 567, Col. Polanco, Ciudad de México', '1234567891', 'Supervisor', 30000),
-(4, 'Ana', 'González', 'Martínez', 'Av. Chapultepec 890, Col. Condesa, Ciudad de México', '9876543211', 'Vendedor', 20000),
-(5, 'Luis', 'Ramírez', 'Rodríguez', 'Calle 987, Col. Nápoles, Ciudad de México', '1234567892', 'Cajero', 15000),
-(6, 'Sofía', 'Hernández', 'Castillo', 'Av. Reforma 654, Col. Cuauhtémoc, Ciudad de México', '9876543212', 'Cocinero', 10000),
-(7, 'David', 'García', 'Pérez', 'Calle 876, Col. Del Valle, Ciudad de México', '1234567893', 'Repartidor', 8000),
-(8, 'Alejandra', 'López', 'Gutiérrez', 'Av. Insurgentes Norte 543, Col. Narvarte, Ciudad de México', '9876543213', 'Lavaplatos', 6000),
-(9, 'Carlos', 'Sánchez', 'Domínguez', 'Calle 765, Col. Roma Sur, Ciudad de México', '1234567894', 'Ayudante general', 5000),
-(10, 'Gabriela', 'González', 'Martínez', 'Av. Chapultepec 432, Col. Juárez, Ciudad de México', '9876543214', 'Recepcionista', 4000),
-(11, 'José', 'Ramírez', 'Rodríguez', 'Calle 654, Col. Polanco, Ciudad de México', '1234567895', 'Limpiador', 3000),
-(12, 'Jessica', 'Hernández', 'Castillo', 'Av. Reforma 321, Col. Cuauhtémoc, Ciudad de México', '9876543215', 'Guardia de seguridad', 2000),
-(13, 'Diego', 'García', 'Pérez', 'Calle 543, Col. Del Valle, Ciudad de México', '1234567896', 'Jardinero', 1000),
-(14, 'Andrea', 'López', 'Gutiérrez', 'Av. Insurgentes Sur 210, Col. Narvarte, Ciudad de México', '9876543217', 'Secretaria', 1500),
-(15, 'Martín', 'Sánchez', 'Domínguez', 'Calle 432, Col. Roma Sur, Ciudad de México', '1234567898', 'Contador', 2500),
-(16, 'Laura', 'González', 'Martínez', 'Av. Chapultepec 100, Col. Juárez, Ciudad de México', '9876543219', 'Abogado', 3500),
-(17, 'Pablo', 'Ramírez', 'Rodríguez', 'Calle 321, Col. Polanco, Ciudad de México', '1234567890', 'Médico', 4500),
-(18, 'Mariana', 'Hernández', 'Castillo', 'Av. Reforma 210, Col. Cuauhtémoc, Ciudad de México', '9876543211', 'Psicólogo', 5500),
-(19, 'Ricardo', 'Gómez', 'Pérez', 'Calle 777, Col. Del Valle, Ciudad de México', '1234567891', 'Cocinero', 9000),
-(20, 'Isabel', 'Ramírez', 'Gutiérrez', 'Av. Reforma 543, Col. Polanco, Ciudad de México', '9876543212', 'Repartidor', 7000),
-(21, 'Fernando', 'Sánchez', 'Martínez', 'Calle 111, Col. Roma Sur, Ciudad de México', '1234567892', 'Cajero', 13000),
-(22, 'Gloria', 'López', 'Rodríguez', 'Av. Insurgentes 210, Col. Narvarte, Ciudad de México', '9876543213', 'Gerente', 50000),
-(23, 'Roberto', 'Hernández', 'Gómez', 'Calle 222, Col. Juárez, Ciudad de México', '1234567893', 'Subgerente', 40000),
-(24, 'Carmen', 'García', 'Castillo', 'Av. Reforma 987, Col. Cuauhtémoc, Ciudad de México', '9876543214', 'Supervisor', 30000),
-(25, 'Raúl', 'Pérez', 'Gutiérrez', 'Calle 333, Col. Condesa, Ciudad de México', '1234567894', 'Vendedor', 20000),
-(26, 'Patricia', 'Sánchez', 'Hernández', 'Av. Insurgentes 654, Col. Polanco, Ciudad de México', '9876543215', 'Cocinero', 10000),
-(27, 'Mario', 'Ramírez', 'Gómez', 'Calle 444, Col. Del Valle, Ciudad de México', '1234567895', 'Repartidor', 8000),
-(28, 'Sara', 'López', 'Pérez', 'Av. Reforma 432, Col. Narvarte, Ciudad de México', '9876543216', 'Cajero', 15000),
-(29, 'Javier', 'Hernández', 'Martínez', 'Calle 555, Col. Cuauhtémoc, Ciudad de México', '1234567896', 'Lavaplatos', 6000),
-(30, 'Leticia', 'García', 'Sánchez', 'Av. Chapultepec 123, Col. Centro, Ciudad de México', '987654321
+(101, 'Juan', 'Pérez', 'García', 'Calle 123, Col. Centro, Ciudad de México', '1234567890', 'Gerente', 50000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(102, 'María', 'López', 'Hernández', 'Av. Insurgentes, Ciudad de México', '9876543210', 'Subgerente', 40000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(103, 'Pedro', 'Sánchez', 'Gómez', 'Calle 567, Col. Polanco, Ciudad de México', '1234567891', 'Supervisor', 30000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(104, 'Ana', 'González', 'Martínez', 'Av. Chapultepec 890, Col. Condesa, Ciudad de México', '9876543211', 'Vendedor', 20000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(105, 'Luis', 'Ramírez', 'Rodríguez', 'Calle 987, Col. Nápoles, Ciudad de México', '1234567892', 'Cajero', 15000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(106, 'Sofía', 'Hernández', 'Castillo', 'Av. Reforma 654, Col. Cuauhtémoc, Ciudad de México', '9876543212', 'Cocinero', 10000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(107, 'David', 'García', 'Pérez', 'Calle 876, Col. Del Valle, Ciudad de México', '1234567893', 'Repartidor', 8000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(108, 'Alejandra', 'López', 'Gutiérrez', 'Av. Insurgentes Norte 543, Col. Narvarte, Ciudad de México', '9876543213', 'Lavaplatos', 6000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(109, 'Carlos', 'Sánchez', 'Domínguez', 'Calle 765, Col. Roma Sur, Ciudad de México', '1234567894', 'Ayudante', 5000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(110, 'Gabriela', 'González', 'Martínez', 'Av. Chapultepec 432, Col. Juárez, Ciudad de México', '9876543214', 'Recepcionista', 4000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(111, 'José', 'Ramírez', 'Rodríguez', 'Calle 654, Col. Polanco, Ciudad de México', '1234567895', 'Ayudante', 3000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(112, 'Jessica', 'Hernández', 'Castillo', 'Av. Reforma 321, Col. Cuauhtémoc, Ciudad de México', '9876543215', 'Ayudante', 2000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(113, 'Diego', 'García', 'Pérez', 'Calle 543, Col. Del Valle, Ciudad de México', '1234567896', 'Ayudante', 1000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(114, 'Andrea', 'López', 'Gutiérrez', 'Av. Insurgentes Sur 210, Col. Narvarte, Ciudad de México', '9876543217', 'Ayudante', 1500);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(115, 'Martín', 'Sánchez', 'Domínguez', 'Calle 432, Col. Roma Sur, Ciudad de México', '1234567898', 'Ayudante', 2500);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(116, 'Laura', 'González', 'Martínez', 'Av. Chapultepec 100, Col. Juárez, Ciudad de México', '9876543219', 'Ayudante', 3500);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(117, 'Pablo', 'Ramírez', 'Rodríguez', 'Calle 321, Col. Polanco, Ciudad de México', '1234567890', 'Ayudante', 4500);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(118, 'Mariana', 'Hernández', 'Castillo', 'Av. Reforma 210, Col. Cuauhtémoc, Ciudad de México', '9876543211', 'Ayudante', 5500);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(119, 'Ricardo', 'Gómez', 'Pérez', 'Calle 777, Col. Del Valle, Ciudad de México', '1234567891', 'Cocinero', 9000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(120, 'Isabel', 'Ramírez', 'Gutiérrez', 'Av. Reforma 543, Col. Polanco, Ciudad de México', '9876543212', 'Repartidor', 7000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(121, 'Fernando', 'Sánchez', 'Martínez', 'Calle 111, Col. Roma Sur, Ciudad de México', '1234567892', 'Cajero', 13000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(122, 'Gloria', 'López', 'Rodríguez', 'Av. Insurgentes 210, Col. Narvarte, Ciudad de México', '9876543213', 'Gerente', 50000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(123, 'Roberto', 'Hernández', 'Gómez', 'Calle 222, Col. Juárez, Ciudad de México', '1234567893', 'Subgerente', 40000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(124, 'Carmen', 'García', 'Castillo', 'Av. Reforma 987, Col. Cuauhtémoc, Ciudad de México', '9876543214', 'Supervisor', 30000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(125, 'Raúl', 'Pérez', 'Gutiérrez', 'Calle 333, Col. Condesa, Ciudad de México', '1234567894', 'Vendedor', 20000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(126, 'Patricia', 'Sánchez', 'Hernández', 'Av. Insurgentes 654, Col. Polanco, Ciudad de México', '9876543215', 'Cocinero', 10000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(127, 'Mario', 'Ramírez', 'Gómez', 'Calle 444, Col. Del Valle, Ciudad de México', '1234567895', 'Repartidor', 8000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(128, 'Sara', 'López', 'Pérez', 'Av. Reforma 432, Col. Narvarte, Ciudad de México', '9876543216', 'Cajero', 15000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(129, 'Javier', 'Hernández', 'Martínez', 'Calle 555, Col. Cuauhtémoc, Ciudad de México', '1234567896', 'Lavaplatos', 6000);
+INSERT INTO EMPLEADO(CLAVE_EMPLEADO, NOMBRE, APELLIDO_PATERNO, APELLIDO_MATERNO, DIRECCION, RFC, CARGO, SALARIO)
+VALUES
+(130, 'Leticia', 'García', 'Sánchez', 'Av. Chapultepec 123, Col. Centro, Ciudad de México', '987654321', 'Repartidor', 3000);
+
+
+
+
 
 
 ---------------------------------------------------------------------------------------------------------------
@@ -56,39 +119,98 @@ CREATE TABLE CLIENTE(
   TELEFONO NUMBER
 );
 
+SELECT *FROM CLIENTE;
 
 INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
 VALUES
-(1, 'Laura', 'Gómez', 'Calle 11, Col. Centro, Ciudad de México', 5551234567),
-(2, 'Carlos', 'Hernández', 'Av. Juárez 123, Col. Roma, Ciudad de México', 5559876543),
-(3, 'Miguel', 'González', 'Calle 45, Col. Polanco, Ciudad de México', 5558765432),
-(4, 'Ana', 'López', 'Av. Insurgentes 678, Col. Condesa, Ciudad de México', 5552345678),
-(5, 'David', 'Pérez', 'Calle 90, Col. Nápoles, Ciudad de México', 5557654321),
-(6, 'Sofía', 'Martínez', 'Av. Reforma 543, Col. Cuauhtémoc, Ciudad de México', 5553218765),
-(7, 'Diego', 'Ramírez', 'Calle 98, Col. Del Valle, Ciudad de México', 5559876123),
-(8, 'Luis', 'Gutiérrez', 'Av. Chapultepec 321, Col. Narvarte, Ciudad de México', 5558765432),
-(9, 'Maria', 'Castillo', 'Calle 76, Col. Roma Sur, Ciudad de México', 5552345678),
-(10, 'Pablo', 'Sánchez', 'Av. Juárez 234, Col. Juárez, Ciudad de México', 5551234567),
-(11, 'Carmen', 'Gómez', 'Calle 21, Col. Centro, Ciudad de México', 5559876543),
-(12, 'Roberto', 'Hernández', 'Av. Reforma 543, Col. Condesa, Ciudad de México', 5558765432),
-(13, 'Isabel', 'Pérez', 'Calle 32, Col. Polanco, Ciudad de México', 5552345678),
-(14, 'Mariana', 'López', 'Av. Insurgentes 123, Col. Nápoles, Ciudad de México', 5557654321),
-(15, 'Fernando', 'González', 'Calle 54, Col. Cuauhtémoc, Ciudad de México', 5559876123),
-(16, 'Sara', 'Ramírez', 'Av. Chapultepec 765, Col. Del Valle, Ciudad de México', 5553218765),
-(17, 'Pedro', 'Gutiérrez', 'Calle 12, Col. Roma, Ciudad de México', 5559876543),
-(18, 'Lucía', 'Martínez', 'Av. Juárez 432, Col. Juárez, Ciudad de México', 5551234567),
-(19, 'Javier', 'Castillo', 'Calle 87, Col. Centro, Ciudad de México', 5559876123),
-(20, 'Leticia', 'Sánchez', 'Av. Reforma 234, Col. Narvarte, Ciudad de México', 5552345678),
-(21, 'Manuel', 'Hernández', 'Calle 67, Col. Polanco, Ciudad de México', 5557654321),
-(22, 'Verónica', 'Pérez', 'Av. Insurgentes 321, Col. Condesa, Ciudad de México', 5559876543),
-(23, 'Ricardo', 'Ramírez', 'Calle 43, Col. Nápoles, Ciudad de México', 5558765432),
-(24, 'Andrea', 'Gómez', 'Av. Chapultepec 654, Col. Cuauhtémoc, Ciudad de México', 5552345678),
-(25, 'Gloria', 'López', 'Calle 32, Col. Del Valle, Ciudad de México', 5559876123),
-(26, 'José', 'Gutiérrez', 'Av. Juárez 543, Col. Centro, Ciudad de México', 5551234567),
-(27, 'Elena', 'Hernández', 'Calle 21, Col. Roma, Ciudad de México', 5559876543),
-(28, 'Hugo', 'Martínez', 'Av. Reforma 123, Col. Condesa, Ciudad de México', 5558765432),
-(29, 'María', 'Ramírez', 'Calle 76, Col. Nápoles, Ciudad de México', 5552345678),
-(30, 'Alejandro', 'Pérez', 'Av. Insurgentes 543, Col. Cuauhtémoc, Ciudad de México', 5557654321);
+(1, 'Laura', 'Gómez', 'Col. Centro, Ciudad de México', 5551234567);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(2, 'Carlos', 'Hernández', 'Juárez 123, Ciudad de México', 5559876543);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(3, 'Miguel', 'González', 'Calle 45, Col. Polanco, Ciudad de México', 5558765432);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(4, 'Ana', 'López', 'Col. Condesa, Ciudad de México', 5552345678);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(5, 'David', 'Pérez', 'Col. Nápoles, Ciudad de México', 5557654321);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(6, 'Sofía', 'Martínez', 'Col. Cuauhtémoc, Ciudad de México', 5553218765);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(7, 'Diego', 'Ramírez', 'Col. Del Valle, Ciudad de México', 5559876123);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(8, 'Luis', 'Gutiérrez', 'Col. Narvarte, Ciudad de México', 5558765432);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(9, 'Maria', 'Castillo', 'Col. Roma Sur, Ciudad de México', 5552345678);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(10, 'Pablo', 'Sánchez', 'Juárez 234, Col. Juárez, Ciudad de México', 5551234567);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(11, 'Carmen', 'Gómez', 'Col. Centro, Ciudad de México', 5559876543);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(12, 'Roberto', 'Hernández', 'Col. Condesa, Ciudad de México', 5558765432);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(13, 'Isabel', 'Pérez', 'Col. Polanco, Ciudad de México', 5552345678);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(14, 'Mariana', 'López', '123, Col. Nápoles, Ciudad de México', 5557654321);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(15, 'Fernando', 'González', '54, Col. Cuauhtémoc, Ciudad de México', 5559876123);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(16, 'Sara', 'Ramírez', 'Col. Del Valle, Ciudad de México', 5553218765);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(17, 'Pedro', 'Gutiérrez', 'Calle 12, Col. Roma, Ciudad de México', 5559876543);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(18, 'Lucía', 'Martínez', '432, Col. Juárez, Ciudad de México', 5551234567);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(19, 'Javier', 'Castillo', 'Calle 87, Col. Centro, Ciudad de México', 5559876123);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(20, 'Leticia', 'Sánchez', '234, Col. Narvarte, Ciudad de México', 5552345678);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(21, 'Manuel', 'Hernández', 'Calle 67, Col. Polanco, Ciudad de México', 5557654321);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(22, 'Verónica', 'Pérez', '321, Col. Condesa, Ciudad de México', 5559876543);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(23, 'Ricardo', 'Ramírez', 'Calle 43, Col. Nápoles, Ciudad de México', 5558765432);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(24, 'Andrea', 'Gómez', '654, Col. Cuauhtémoc, Ciudad de México', 5552345678);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(25, 'Gloria', 'López', '32, Col. Del Valle, Ciudad de México', 5559876123);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(26, 'José', 'Gutiérrez', '543, Col. Centro, Ciudad de México', 5551234567);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(27, 'Elena', 'Hernández', '21, Col. Roma, Ciudad de México', 5559876543);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(28, 'Hugo', 'Martínez', '123, Col. Condesa, Ciudad de México', 5558765432);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(29, 'María', 'Ramírez', '76, Col. Nápoles, Ciudad de México', 5552345678);
+INSERT INTO CLIENTE(CLAVE_CLIENTE, NOMBRE_CLIENTE, APELLIDO, DIRECCION, TELEFONO)
+VALUES
+(30, 'Alejandro', 'Pérez', '199, Col. Cuauhtémoc, Ciudad de México', 5557654321);
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -103,38 +225,98 @@ CREATE TABLE PEDIDO(
   FOREIGN KEY (CLAVE_CLIENTE) REFERENCES CLIENTE(CLAVE_CLIENTE)
 );
 
+SELECT *FROM PEDIDO;
+
 INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
 VALUES
-(1, 1, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_DATE('2023-10-25', 'YYYY-MM-DD'), 'Pedido 1', 3),
-(2, 2, TO_DATE('2023-10-21', 'YYYY-MM-DD'), TO_DATE('2023-10-26', 'YYYY-MM-DD'), 'Pedido 2', 2),
-(3, 3, TO_DATE('2023-10-22', 'YYYY-MM-DD'), TO_DATE('2023-10-27', 'YYYY-MM-DD'), 'Pedido 3', 4),
-(4, 4, TO_DATE('2023-10-23', 'YYYY-MM-DD'), TO_DATE('2023-10-28', 'YYYY-MM-DD'), 'Pedido 4', 1),
-(5, 5, TO_DATE('2023-10-24', 'YYYY-MM-DD'), TO_DATE('2023-10-29', 'YYYY-MM-DD'), 'Pedido 5', 2),
-(6, 6, TO_DATE('2023-10-25', 'YYYY-MM-DD'), TO_DATE('2023-10-30', 'YYYY-MM-DD'), 'Pedido 6', 3),
-(7, 7, TO_DATE('2023-10-26', 'YYYY-MM-DD'), TO_DATE('2023-10-31', 'YYYY-MM-DD'), 'Pedido 7', 5),
-(8, 8, TO_DATE('2023-10-27', 'YYYY-MM-DD'), TO_DATE('2023-11-01', 'YYYY-MM-DD'), 'Pedido 8', 2),
-(9, 9, TO_DATE('2023-10-28', 'YYYY-MM-DD'), TO_DATE('2023-11-02', 'YYYY-MM-DD'), 'Pedido 9', 3),
-(10, 10, TO_DATE('2023-10-29', 'YYYY-MM-DD'), TO_DATE('2023-11-03', 'YYYY-MM-DD'), 'Pedido 10', 1),
-(11, 11, TO_DATE('2023-10-30', 'YYYY-MM-DD'), TO_DATE('2023-11-04', 'YYYY-MM-DD'), 'Pedido 11', 4),
-(12, 12, TO_DATE('2023-10-31', 'YYYY-MM-DD'), TO_DATE('2023-11-05', 'YYYY-MM-DD'), 'Pedido 12', 2),
-(13, 13, TO_DATE('2023-11-01', 'YYYY-MM-DD'), TO_DATE('2023-11-06', 'YYYY-MM-DD'), 'Pedido 13', 1),
-(14, 14, TO_DATE('2023-11-02', 'YYYY-MM-DD'), TO_DATE('2023-11-07', 'YYYY-MM-DD'), 'Pedido 14', 3),
-(15, 15, TO_DATE('2023-11-03', 'YYYY-MM-DD'), TO_DATE('2023-11-08', 'YYYY-MM-DD'), 'Pedido 15', 2),
-(16, 16, TO_DATE('2023-11-04', 'YYYY-MM-DD'), TO_DATE('2023-11-09', 'YYYY-MM-DD'), 'Pedido 16', 4),
-(17, 17, TO_DATE('2023-11-05', 'YYYY-MM-DD'), TO_DATE('2023-11-10', 'YYYY-MM-DD'), 'Pedido 17', 1),
-(18, 18, TO_DATE('2023-11-06', 'YYYY-MM-DD'), TO_DATE('2023-11-11', 'YYYY-MM-DD'), 'Pedido 18', 5),
-(19, 19, TO_DATE('2023-11-07', 'YYYY-MM-DD'), TO_DATE('2023-11-12', 'YYYY-MM-DD'), 'Pedido 19', 3),
-(20, 20, TO_DATE('2023-11-08', 'YYYY-MM-DD'), TO_DATE('2023-11-13', 'YYYY-MM-DD'), 'Pedido 20', 2),
-(21, 21, TO_DATE('2023-11-09', 'YYYY-MM-DD'), TO_DATE('2023-11-14', 'YYYY-MM-DD'), 'Pedido 21', 4),
-(22, 22, TO_DATE('2023-11-10', 'YYYY-MM-DD'), TO_DATE('2023-11-15', 'YYYY-MM-DD'), 'Pedido 22', 5),
-(23, 23, TO_DATE('2023-11-11', 'YYYY-MM-DD'), TO_DATE('2023-11-16', 'YYYY-MM-DD'), 'Pedido 23', 3),
-(24, 24, TO_DATE('2023-11-12', 'YYYY-MM-DD'), TO_DATE('2023-11-17', 'YYYY-MM-DD'), 'Pedido 24', 1),
-(25, 25, TO_DATE('2023-11-13', 'YYYY-MM-DD'), TO_DATE('2023-11-18', 'YYYY-MM-DD'), 'Pedido 25', 2),
-(26, 26, TO_DATE('2023-11-14', 'YYYY-MM-DD'), TO_DATE('2023-11-19', 'YYYY-MM-DD'), 'Pedido 26', 4),
-(27, 27, TO_DATE('2023-11-15', 'YYYY-MM-DD'), TO_DATE('2023-11-20', 'YYYY-MM-DD'), 'Pedido 27', 5),
-(28, 28, TO_DATE('2023-11-16', 'YYYY-MM-DD'), TO_DATE('2023-11-21', 'YYYY-MM-DD'), 'Pedido 28', 2),
-(29, 29, TO_DATE('2023-11-17', 'YYYY-MM-DD'), TO_DATE('2023-11-22', 'YYYY-MM-DD'), 'Pedido 29', 3),
-(30, 30, TO_DATE('2023-11-18', 'YYYY-MM-DD'), TO_DATE('2023-11-23', 'YYYY-MM-DD'), 'Pedido 30', 1);
+(31, 1, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_DATE('2023-10-25', 'YYYY-MM-DD'), 'Pedido 1', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(32, 2, TO_DATE('2023-10-21', 'YYYY-MM-DD'), TO_DATE('2023-10-26', 'YYYY-MM-DD'), 'Pedido 2', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(33, 3, TO_DATE('2023-10-22', 'YYYY-MM-DD'), TO_DATE('2023-10-27', 'YYYY-MM-DD'), 'Pedido 3', 4);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(34, 4, TO_DATE('2023-10-23', 'YYYY-MM-DD'), TO_DATE('2023-10-28', 'YYYY-MM-DD'), 'Pedido 4', 1);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(35, 5, TO_DATE('2023-10-24', 'YYYY-MM-DD'), TO_DATE('2023-10-29', 'YYYY-MM-DD'), 'Pedido 5', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(36, 6, TO_DATE('2023-10-25', 'YYYY-MM-DD'), TO_DATE('2023-10-30', 'YYYY-MM-DD'), 'Pedido 6', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(37, 7, TO_DATE('2023-10-26', 'YYYY-MM-DD'), TO_DATE('2023-10-31', 'YYYY-MM-DD'), 'Pedido 7', 5);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(38, 8, TO_DATE('2023-10-27', 'YYYY-MM-DD'), TO_DATE('2023-11-01', 'YYYY-MM-DD'), 'Pedido 8', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(39, 9, TO_DATE('2023-10-28', 'YYYY-MM-DD'), TO_DATE('2023-11-02', 'YYYY-MM-DD'), 'Pedido 9', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(40, 10, TO_DATE('2023-10-29', 'YYYY-MM-DD'), TO_DATE('2023-11-03', 'YYYY-MM-DD'), 'Pedido 10', 1);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(41, 11, TO_DATE('2023-10-30', 'YYYY-MM-DD'), TO_DATE('2023-11-04', 'YYYY-MM-DD'), 'Pedido 11', 4);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(42, 12, TO_DATE('2023-10-31', 'YYYY-MM-DD'), TO_DATE('2023-11-05', 'YYYY-MM-DD'), 'Pedido 12', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(43, 13, TO_DATE('2023-11-01', 'YYYY-MM-DD'), TO_DATE('2023-11-06', 'YYYY-MM-DD'), 'Pedido 13', 1);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(44, 14, TO_DATE('2023-11-02', 'YYYY-MM-DD'), TO_DATE('2023-11-07', 'YYYY-MM-DD'), 'Pedido 14', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(45, 15, TO_DATE('2023-11-03', 'YYYY-MM-DD'), TO_DATE('2023-11-08', 'YYYY-MM-DD'), 'Pedido 15', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(46, 16, TO_DATE('2023-11-04', 'YYYY-MM-DD'), TO_DATE('2023-11-09', 'YYYY-MM-DD'), 'Pedido 16', 4);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(47, 17, TO_DATE('2023-11-05', 'YYYY-MM-DD'), TO_DATE('2023-11-10', 'YYYY-MM-DD'), 'Pedido 17', 1);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(48, 18, TO_DATE('2023-11-06', 'YYYY-MM-DD'), TO_DATE('2023-11-11', 'YYYY-MM-DD'), 'Pedido 18', 5);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(49, 19, TO_DATE('2023-11-07', 'YYYY-MM-DD'), TO_DATE('2023-11-12', 'YYYY-MM-DD'), 'Pedido 19', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(50, 20, TO_DATE('2023-11-08', 'YYYY-MM-DD'), TO_DATE('2023-11-13', 'YYYY-MM-DD'), 'Pedido 20', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(51, 21, TO_DATE('2023-11-09', 'YYYY-MM-DD'), TO_DATE('2023-11-14', 'YYYY-MM-DD'), 'Pedido 21', 4);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(52, 22, TO_DATE('2023-11-10', 'YYYY-MM-DD'), TO_DATE('2023-11-15', 'YYYY-MM-DD'), 'Pedido 22', 5);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(53, 23, TO_DATE('2023-11-11', 'YYYY-MM-DD'), TO_DATE('2023-11-16', 'YYYY-MM-DD'), 'Pedido 23', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(54, 24, TO_DATE('2023-11-12', 'YYYY-MM-DD'), TO_DATE('2023-11-17', 'YYYY-MM-DD'), 'Pedido 24', 1);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(55, 25, TO_DATE('2023-11-13', 'YYYY-MM-DD'), TO_DATE('2023-11-18', 'YYYY-MM-DD'), 'Pedido 25', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(56, 26, TO_DATE('2023-11-14', 'YYYY-MM-DD'), TO_DATE('2023-11-19', 'YYYY-MM-DD'), 'Pedido 26', 4);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(57, 27, TO_DATE('2023-11-15', 'YYYY-MM-DD'), TO_DATE('2023-11-20', 'YYYY-MM-DD'), 'Pedido 27', 5);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(58, 28, TO_DATE('2023-11-16', 'YYYY-MM-DD'), TO_DATE('2023-11-21', 'YYYY-MM-DD'), 'Pedido 28', 2);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(59, 29, TO_DATE('2023-11-17', 'YYYY-MM-DD'), TO_DATE('2023-11-22', 'YYYY-MM-DD'), 'Pedido 29', 3);
+INSERT INTO PEDIDO(CLAVE_PEDIDO, CLAVE_CLIENTE, FECHA_PEDIDO, FECHA_ENTREGA, DESCRIPCION, CANTIDAD)
+VALUES
+(60, 30, TO_DATE('2023-11-18', 'YYYY-MM-DD'), TO_DATE('2023-11-23', 'YYYY-MM-DD'), 'Pedido 30', 1);
 
 
 ---------------------------------------------------------------------------------------------------------------
@@ -148,39 +330,100 @@ CREATE TABLE PIZZA(
   DESCRIPCION VARCHAR2(100)
 );
 
+SELECT *FROM PIZZA;
+
 
 INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
 VALUES
-(1, 'Pizza Margarita', 'Mediana', 150, 'Deliciosa pizza con tomate y mozzarella.'),
-(2, 'Pizza Pepperoni', 'Grande', 200, 'Pizza de pepperoni con queso fundido.'),
-(3, 'Pizza Hawaiana', 'Pequeña', 120, 'Pizza con jamón y piña.'),
-(4, 'Pizza Vegetariana', 'Mediana', 160, 'Pizza llena de vegetales frescos.'),
-(5, 'Pizza BBQ', 'Grande', 210, 'Pizza con salsa barbacoa y pollo.'),
-(6, 'Pizza Mexicana', 'Pequeña', 130, 'Pizza con ingredientes típicos de México.'),
-(7, 'Pizza Cuatro Quesos', 'Mediana', 170, 'Pizza con cuatro tipos de queso.'),
-(8, 'Pizza Carnes Frías', 'Grande', 220, 'Pizza con jamón, salami y tocino.'),
-(9, 'Pizza Suprema', 'Mediana', 180, 'Pizza con todo lo que puedas imaginar.'),
-(10, 'Pizza de Pollo', 'Pequeña', 140, 'Pizza con pollo a la parrilla y champiñones.'),
-(11, 'Pizza de Pescado', 'Mediana', 190, 'Pizza con pescado fresco y salsa de ajo.'),
-(12, 'Pizza Caprese', 'Grande', 230, 'Pizza con tomate, mozzarella y albahaca.'),
-(13, 'Pizza de Champiñones', 'Pequeña', 150, 'Pizza con champiñones y queso suizo.'),
-(14, 'Pizza de Jamón', 'Mediana', 160, 'Pizza con jamón y tomate.'),
-(15, 'Pizza de Tres Carnes', 'Grande', 210, 'Pizza con tres tipos de carne.'),
-(16, 'Pizza de Calabacín', 'Pequeña', 140, 'Pizza con calabacín y cebolla.'),
-(17, 'Pizza de Salmón', 'Mediana', 200, 'Pizza con salmón ahumado y crema agria.'),
-(18, 'Pizza Picante', 'Grande', 220, 'Pizza con jalapeños y chiles.'),
-(19, 'Pizza de Berenjena', 'Pequeña', 150, 'Pizza con berenjena y pimientos.'),
-(20, 'Pizza de Camarones', 'Mediana', 210, 'Pizza con camarones y salsa de ajo.'),
-(21, 'Pizza de Pollo BBQ', 'Grande', 230, 'Pizza con pollo a la barbacoa y cebolla roja.'),
-(22, 'Pizza de Hongos', 'Pequeña', 140, 'Pizza con una variedad de hongos.'),
-(23, 'Pizza de Salami', 'Mediana', 160, 'Pizza con salami y aceitunas.'),
-(24, 'Pizza de Pavo', 'Grande', 210, 'Pizza con pavo y espinacas.'),
-(25, 'Pizza de Atún', 'Pequeña', 150, 'Pizza con atún y alcaparras.'),
-(26, 'Pizza de Pimientos', 'Mediana', 180, 'Pizza con pimientos asados y cebolla.'),
-(27, 'Pizza de Tomate y Albahaca', 'Grande', 230, 'Pizza con tomates frescos y albahaca.'),
-(28, 'Pizza de Pollo Picante', 'Pequeña', 160, 'Pizza con pollo picante y jalapeños.'),
-(29, 'Pizza de Champiñones y Espinacas', 'Mediana', 190, 'Pizza con champiñones y espinacas frescas.'),
+(1, 'Pizza Margarita', 'Mediana', 150, 'Deliciosa pizza con tomate y mozzarella.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(2, 'Pizza Pepperoni', 'Grande', 200, 'Pizza de pepperoni con queso fundido.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(3, 'Pizza Hawaiana', 'Pequeña', 120, 'Pizza con jamón y piña.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(4, 'Pizza Vegetariana', 'Mediana', 160, 'Pizza llena de vegetales frescos.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(5, 'Pizza BBQ', 'Grande', 210, 'Pizza con salsa barbacoa y pollo.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(6, 'Pizza Mexicana', 'Pequeña', 130, 'Pizza con ingredientes típicos de México.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(7, 'Pizza Cuatro Quesos', 'Mediana', 170, 'Pizza con cuatro tipos de queso.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(8, 'Pizza Carnes Frías', 'Grande', 220, 'Pizza con jamón, salami y tocino.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(9, 'Pizza Suprema', 'Mediana', 180, 'Pizza con todo lo que puedas imaginar.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(10, 'Pizza de Pollo', 'Pequeña', 140, 'Pizza con pollo a la parrilla y champiñones.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(11, 'Pizza de Pescado', 'Mediana', 190, 'Pizza con pescado fresco y salsa de ajo.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(12, 'Pizza Caprese', 'Grande', 230, 'Pizza con tomate, mozzarella y albahaca.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(13, 'Pizza de Champiñones', 'Pequeña', 150, 'Pizza con champiñones y queso suizo.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(14, 'Pizza de Jamón', 'Mediana', 160, 'Pizza con jamón y tomate.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(15, 'Pizza de Tres Carnes', 'Grande', 210, 'Pizza con tres tipos de carne.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(16, 'Pizza de Calabacín', 'Pequeña', 140, 'Pizza con calabacín y cebolla.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(17, 'Pizza de Salmón', 'Mediana', 200, 'Pizza con salmón ahumado y crema agria.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(18, 'Pizza Picante', 'Grande', 220, 'Pizza con jalapeños y chiles.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(19, 'Pizza de Berenjena', 'Pequeña', 150, 'Pizza con berenjena y pimientos.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(20, 'Pizza de Camarones', 'Mediana', 210, 'Pizza con camarones y salsa de ajo.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(21, 'Pizza de Pollo BBQ', 'Grande', 230, 'Pizza con pollo a la barbacoa y cebolla roja.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(22, 'Pizza de Hongos', 'Pequeña', 140, 'Pizza con una variedad de hongos.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(23, 'Pizza de Salami', 'Mediana', 160, 'Pizza con salami y aceitunas.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(24, 'Pizza de Pavo', 'Grande', 210, 'Pizza con pavo y espinacas.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(25, 'Pizza de Atún', 'Pequeña', 150, 'Pizza con atún y alcaparras.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(26, 'Pizza de Pimientos', 'Mediana', 180, 'Pizza con pimientos asados y cebolla.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(27, 'Pizza de Tomate y Albahaca', 'Grande', 230, 'Pizza con tomates frescos y albahaca.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(28, 'Pizza de Pollo Picante', 'Pequeña', 160, 'Pizza con pollo picante y jalapeños.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
+(29, 'Pizza de Champiñones y Espinacas', 'Mediana', 190, 'Pizza con champiñones y espinacas frescas.');
+INSERT INTO PIZZA(CLAVE_PIZZA, PIZZA, TAMANO, PRECIO, DESCRIPCION)
+VALUES
 (30, 'Pizza de Carne de Res', 'Grande', 220, 'Pizza con carne de res y cebolla caramelizada.');
+
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -190,38 +433,99 @@ CREATE TABLE INGREDIENTES(
   NOMBRE_INGREDIENTE VARCHAR2(50)
 );
 
+
+SELECT *FROM INGREDIENTES;
+
 INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
 VALUES
-(1, 'Tomate'),
-(2, 'Mozzarella'),
-(3, 'Pepperoni'),
-(4, 'Piña'),
-(5, 'Jamón'),
-(6, 'Pollo'),
-(7, 'Salsa Barbacoa'),
-(8, 'Salami'),
-(9, 'Tocino'),
-(10, 'Champiñones'),
-(11, 'Pimiento'),
-(12, 'Salsa de Ajo'),
-(13, 'Albahaca'),
-(14, 'Queso Suizo'),
-(15, 'Tomate y Mozzarella'),
-(16, 'Crema Agria'),
-(17, 'Jalapeños'),
-(18, 'Berenjena'),
-(19, 'Camarones'),
-(20, 'Hongos'),
-(21, 'Aceitunas'),
-(22, 'Espinacas'),
-(23, 'Atún'),
-(24, 'Alcaparras'),
-(25, 'Pimientos Asados'),
-(26, 'Cebolla Caramelizada'),
-(27, 'Carne de Res'),
-(28, 'Salmón Ahumado'),
-(29, 'Pavo'),
-(30, 'Tomates Frescos');
+(61, 'Tomate');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(62, 'Mozzarella');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(63, 'Pepperoni');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(64, 'Piña');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(65, 'Jamón');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(66, 'Pollo');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(67, 'Salsa Barbacoa');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(68, 'Salami');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(69, 'Tocino');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(70, 'Champiñones');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(71, 'Pimiento');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(72, 'Salsa de Ajo');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(73, 'Albahaca');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(74, 'Queso Suizo');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(75, 'Tomate y Mozzarella');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(76, 'Crema Agria');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(77, 'Jalapeños');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(78, 'Berenjena');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(79, 'Camarones');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(80, 'Hongos');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(81, 'Aceitunas');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(82, 'Espinacas');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(83, 'Atún');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(84, 'Alcaparras');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(85, 'Pimientos Asados');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(86, 'Cebolla Caramelizada');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(87, 'Carne de Res');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(88, 'Salmón Ahumado');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(89, 'Pavo');
+INSERT INTO INGREDIENTES(CLAVE_INGREDIENTES, NOMBRE_INGREDIENTE)
+VALUES
+(90, 'Tomates Frescos');
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -240,3 +544,143 @@ CREATE TABLE PIZZA_INGREDIENTES(
   FOREIGN KEY (CLAVE_PIZZA) REFERENCES PIZZA(CLAVE_PIZZA),
   FOREIGN KEY (CLAVE_INGREDIENTES) REFERENCES INGREDIENTES(CLAVE_INGREDIENTES)
 );
+
+
+
+
+
+
+
+----------------------------------------
+--Consulta CROSS JOIN con ON
+----------------------------------------
+SELECT c.*, p.*
+FROM CLIENTE c
+CROSS JOIN PEDIDO p
+WHERE c.CLAVE_CLIENTE = p.CLAVE_CLIENTE;
+
+
+
+-----------------------------------------
+--Consulta CROSS JOIN con USING
+-----------------------------------------
+SELECT c.*, p.*, pz.*
+FROM CLIENTE c
+CROSS JOIN PEDIDO p
+CROSS JOIN PIZZA pz;
+
+
+-----------------------------------------
+--Consulta CROSS JOIN con ORDER BY
+-----------------------------------------
+SELECT c.*, p.*, pz.*
+FROM CLIENTE c
+CROSS JOIN PEDIDO p
+CROSS JOIN PIZZA pz
+ORDER BY c.CLAVE_CLIENTE, p.CLAVE_PEDIDO, pz.CLAVE_PIZZA;
+
+
+-----------------------------------------
+--Consulta NATURAL JOIN con ON
+-----------------------------------------
+SELECT *
+FROM CLIENTE
+NATURAL JOIN PEDIDO
+ORDER BY CLAVE_CLIENTE, CLAVE_PEDIDO;
+
+
+-----------------------------------------
+--Consulta NATURAL JOIN con USING
+-----------------------------------------
+
+SELECT *
+FROM CLIENTE
+NATURAL JOIN CLIENTE
+USING (CLAVE_CLIENTE);
+
+
+SELECT *
+FROM CLIENTE
+NATURAL JOIN CLIENTE
+ORDER BY CLAVE_CLIENTE, CLAVE_PEDIDO;
+
+
+-----------------------------------------
+--Consulta JOIN USING utilizando ON y ORDEN BY
+-----------------------------------------
+SELECT c.NOMBRE_CLIENTE, c.APELLIDO, c.DIRECCION
+FROM CLIENTE c
+JOIN PEDIDO p USING(CLAVE_CLIENTE)
+ORDER BY c.NOMBRE_CLIENTE, c.APELLIDO, p.DESCRIPCION;
+
+
+SELECT *
+FROM CLIENTE
+JOIN PEDIDO
+ON CLIENTE.CLAVE_CLIENTE = PEDIDO.CLAVE_CLIENTE
+ORDER BY CLIENTE.CLAVE_CLIENTE, PEDIDO.CLAVE_PEDIDO;
+
+
+-----------------------------------------
+--Consulta JOIN USSING utilizando ON y ORDEN BY
+-----------------------------------------
+SELECT *
+FROM CLIENTE
+JOIN PEDIDO
+USING (CLAVE_CLIENTE)
+ORDER BY CLAVE_CLIENTE, CLAVE_PEDIDO;
+
+-----------------------------------------
+--Consulta JOIN ON utilizando ORDEN BY
+-----------------------------------------
+
+SELECT *
+FROM CLIENTE c
+JOIN PEDIDO p
+ON c.CLAVE_CLIENTE = p.CLAVE_CLIENTE
+ORDER BY c.CLAVE_CLIENTE, p.CLAVE_PEDIDO;
+
+
+-----------------------------------------
+--Consulta OUTER JOIN
+-----------------------------------------
+
+SELECT c.NOMBRE_CLIENTE, p.CLAVE_PEDIDO
+FROM CLIENTE c
+LEFT OUTER JOIN PEDIDO p ON c.CLAVE_CLIENTE = p.CLAVE_CLIENTE;
+
+
+-----------------------------------------
+--Consulta FULL OUTER JOIN
+-----------------------------------------
+
+SELECT c.*, p.*
+FROM CLIENTE c
+FULL JOIN PEDIDO p ON c.CLAVE_CLIENTE = p.CLAVE_CLIENTE;
+
+-----------------------------------------
+--Consulta RIGTH OUTER JOIN
+-----------------------------------------
+
+SELECT c.*, p.*
+FROM CLIENTE c
+RIGHT JOIN PEDIDO p ON c.CLAVE_CLIENTE = p.CLAVE_CLIENTE;
+
+
+-----------------------------------------
+--Consulta CROSS JOIN
+-----------------------------------------
+
+SELECT c.*, p.*
+FROM CLIENTE c
+CROSS JOIN PIZZA p;
+
+
+-----------------------------------------
+--Consulta JOIN (solo)
+-----------------------------------------
+SELECT c.*, p.*
+FROM CLIENTE c
+JOIN PEDIDO p ON c.CLAVE_CLIENTE = p.CLAVE_CLIENTE;
+
+
